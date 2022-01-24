@@ -10,12 +10,20 @@ body {
 
 main {
   max-width: 350px;
-  min-height: 500px;
+  /*Temporary height*/
+  min-height: 400px;
   margin: 0 auto;
   background-color: black;
   padding: 20px;
   border: #b9ad00;
   border-style: solid;
+}
+
+h1 {
+  color: #b9ad00;
+  text-align: center;
+  font-size: 22px;
+  margin: 0;
 }
 
 header {
@@ -26,15 +34,23 @@ header {
 
 nav {
   display: flex;
+  justify-content: space-around;
   align-items: center;
   padding: 0 4px;
   text-decoration: none;
+  font: 500 1rem 'Teko', 'sans-serif';
 }
 
 .title {
-  font: 500 1rem 'Teko', 'sans-serif';
   font-weight: bold;
   font-size: 30px;
   text-transform: uppercase;
   letter-spacing: 2px;
+}
+
+a {
+  display: flex;
+  justify-content: space-around;
+  font-size: 16px;
+  cursor: pointer ;
 }
