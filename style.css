@@ -1,0 +1,40 @@
+body {
+  height: 100vh;
+  margin: 0;
+  background-image: url('/Resources/background.jpg');
+  background-color: #606247;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+main {
+  max-width: 350px;
+  min-height: 500px;
+  margin: 0 auto;
+  background-color: black;
+  padding: 20px;
+  border: #b9ad00;
+  border-style: solid;
+}
+
+header {
+  padding: 15px;
+  margin-bottom: 30px;
+  background-color: #606247;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  padding: 0 4px;
+  text-decoration: none;
+}
+
+.title {
+  font: 500 1rem 'Teko', 'sans-serif';
+  font-weight: bold;
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
