@@ -1,0 +1,59 @@
+body {
+  --color-primary: #606247;
+  --color-secondary: #b9ad00;
+
+  height: 100vh;
+  margin: 0;
+  background-image: url('/Resources/background.jpg');
+  background-color:var(--color-primary);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  font: 500 1rem 'Teko', 'sans-serif';
+  justify-content: center;
+}
+
+main {
+  max-width: 250px;
+  margin: 0 auto;
+  background-color: black;
+  padding: 20px;
+  border:var(--color-secondary);
+  border-style: solid;
+}
+
+h1, p {
+  color:var(--color-secondary);
+  text-align: center;
+}
+
+header {
+  padding: 15px;
+  margin-bottom: 30px;
+  background-color:var(--color-primary);
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 4px;
+  text-decoration: none;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+a {
+  display: flex;
+  justify-content: space-around;
+  font-size: 16px;
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+}

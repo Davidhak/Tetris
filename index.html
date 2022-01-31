@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
@@ -19,10 +19,25 @@
     <nav>
       <div class="title">Tetris</div>
       <a id="play" href="/index.html">Play</a>
-      <a href="/html/hiscores.html">Hi-scores</a>
+      <a href="/html/high-scores.html">Hi-scores</a>
       <a href="/html/instructions.html">Instructions</a>
     </nav>
   </header>
+
+  <!-- 
+  <div class="endGame">
+    <div class="bg-black">
+      <h1>New High Score!</h1>
+      <h2>Player name</h2>
+      <h3>0</h3>
+      <p>points</p>
+      <div>
+        <button id="start">Start Game</button>
+      </div>
+    </div>
+  </div>
+
+-->
 
   <canvas id="tetris" , width="200" , height="400">
   </canvas>
@@ -31,7 +46,6 @@
     Score : <div id="score">0</div>
   </div>
 
-  <script src="/js/spa.js"></script>
   <script src="/js/main.js"></script>
 </body>
 
