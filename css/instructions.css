@@ -18,7 +18,7 @@ main {
   max-width: 250px;
   margin: 0 auto;
   background-color: #000000;
-  padding: 10px;
+  padding: 12px;
   border:var(--color-secondary);
   border-style: solid;
   justify-content: center;
@@ -26,17 +26,20 @@ main {
 }
 
 img {
-  width: 200px;
-  margin-left: 24px;
+  width: 220px;
+  margin-left: 16px;
+  margin-top: 5px;
 }
 
 h1, p {
   color:var(--color-secondary);
   text-align: center;
+  margin: 0;
 }
 
 h1 {
   font-size: 20px;
+  margin-bottom: 10px;
 }
 
 header {
