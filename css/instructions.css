@@ -17,10 +17,17 @@ body {
 main {
   max-width: 250px;
   margin: 0 auto;
-  background-color: black;
-  padding: 20px;
+  background-color: #000000;
+  padding: 10px;
   border:var(--color-secondary);
   border-style: solid;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 200px;
+  margin-left: 24px;
 }
 
 h1, p {
@@ -28,9 +35,13 @@ h1, p {
   text-align: center;
 }
 
+h1 {
+  font-size: 20px;
+}
+
 header {
   padding: 15px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   background-color:var(--color-primary);
 }
 

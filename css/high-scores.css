@@ -18,7 +18,7 @@ main {
   max-width: 250px;
   margin: 0 auto;
   background-color: black;
-  padding: 20px;
+  padding: 10px;
   border:var(--color-secondary);
   border-style: solid;
 }
@@ -36,7 +36,7 @@ p {
 
 header {
   padding: 15px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   background-color:var(--color-primary);
 }
 

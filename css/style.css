@@ -33,24 +33,9 @@ text-align: center;
 color:black;
 }
 
-/*.endGame {
-  z-index: 1000;
-  position: absolute;
-  max-width: 250px;
-  margin: 0 auto;
-  color:var(--color-secondary);
-  background-color: black;
-  border: var(--color-secondary);
-  border-style: solid;
-  align-items: center;
-  justify-content: center;
-}
-*/
-
-
 header {
   padding: 15px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   background-color:var(--color-primary);
 }
 
