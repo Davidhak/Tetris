@@ -18,7 +18,7 @@ main {
   max-width: 250px;
   margin: 0 auto;
   background-color: black;
-  padding: 10px;
+  padding: 12px;
   border:var(--color-secondary);
   border-style: solid;
 }

@@ -1,28 +1,60 @@
 body {
-  --color-primary: #606247;
-  --color-secondary: #b9ad00;
+--color-primary: #606247;
+--color-secondary: #b9ad00;
 
-  height: 100vh;
-  margin: 0;
-  background-image: url('/Resources/background.jpg');
-  background-color:var(--color-primary);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center center;
-  font: 500 1rem 'Teko', 'sans-serif';
-  justify-content: center;
+height: 100vh;
+margin: 0;
+background-image: url('/Resources/background.jpg');
+background-color:var(--color-primary);
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+background-position: center center;
+font: 500 1rem 'Teko', 'sans-serif';
 }
 
 canvas {
-  display: block;
-  margin: 0 auto;
-  padding: 0px;
-  border:var(--color-secondary);
-  border-style: solid;
+display: block;
+margin: 0 auto;
+padding: 0px;
+border:var(--color-secondary);
+border-style: solid;
 }
 
-#score{
+#startGame, #gameOver {
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+margin-top: 20px;
+width: 274px;
+height: 420px;
+font-size: 25px;
+font-weight: bold;
+text-align: center;
+color:var(--color-secondary);
+background-color: black;
+border-color: var(--color-secondary);
+border-style: solid;
+}
+
+#startGame input {
+width: 150px;
+font-size: 20px;
+color: var(--color-secondary);
+background-color: black;
+border: var(--color-secondary);
+border-style: solid;
+text-align: center;
+font: 500 1.5rem 'Teko', 'sans-serif';
+}
+
+p {
+font-size: 16px;
+color: red;
+}
+
+#score, #finalScore {
 display: inline-block;
 }
 
@@ -33,32 +65,41 @@ text-align: center;
 color:black;
 }
 
+#startGameBtn {
+font: 500 1.5rem 'Teko', 'sans-serif';
+margin-bottom: 10px;
+color: var(--color-secondary);
+background-color: black;
+border-color: var(--color-secondary);
+border-style: solid;
+}
+
 header {
-  padding: 15px;
-  margin-bottom: 20px;
-  background-color:var(--color-primary);
+padding: 15px;
+margin-bottom: 30px;
+background-color:var(--color-primary);
 }
 
 nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 0 4px;
-  text-decoration: none;
+display: flex;
+justify-content: space-around;
+align-items: center;
+padding: 0 4px;
+text-decoration: none;
 }
 
 .title {
-  font-weight: bold;
-  font-size: 30px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+font-weight: bold;
+font-size: 30px;
+text-transform: uppercase;
+letter-spacing: 2px;
 }
 
 a {
-  display: flex;
-  justify-content: space-around;
-  font-size: 16px;
-  color: black;
-  cursor: pointer;
-  text-decoration: none;
+display: flex;
+justify-content: space-around;
+font-size: 16px;
+color: black;
+cursor: pointer;
+text-decoration: none;
 }

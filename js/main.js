@@ -1,6 +1,16 @@
 const container = document.getElementById('tetris');
 const context = container.getContext('2d');
 const scoreText = document.getElementById('score');
+const finalScore = document.getElementById('finalScore')
+const text = document.getElementById('scoreText');
+const startGame = document.getElementById('startGame');
+const errorText = document.getElementById('errorText');
+const gameOverContainer = document.getElementById('gameOver');
+
+text.style.visibility = 'hidden';
+scoreText.style.visibility = 'hidden';
+errorText.style.visibility = 'hidden';
+gameOverContainer.style.visibility = 'hidden';
 
 const row = 20;
 const col = column = 10;
@@ -152,7 +162,7 @@ Piece.prototype.lock = function () {
       }
       // if pieces lock on top => game over
       if (this.y + r < 0) {
-        alert("Game Over");
+        GameOver();
         gameOver = true;
         break;
       }
@@ -185,6 +195,7 @@ Piece.prototype.lock = function () {
 
   // update the score
   scoreText.innerHTML = score;
+  finalScore.innerHTML = score;
 }
 
 // collision function
@@ -241,7 +252,7 @@ let gameOver = false;
 function drop() {
   let now = Date.now();
   let delta = now - startDrop;
-  if (delta > 1000) {
+  if (delta > 800) {
     rp.moveDown();
     startDrop = Date.now();
   }
@@ -250,4 +261,25 @@ function drop() {
   }
 }
 
-drop();
+
+function StartGame() {
+  let userName = document.getElementById('name').value;
+
+  if (typeof userName === 'undefined' || !userName) {
+    errorText.style.visibility = 'visible';
+
+  } else {
+    text.style.visibility = 'visible';
+    scoreText.style.visibility = 'visible';
+    startGame.style.visibility = 'hidden';
+    errorText.style.visibility = 'hidden';
+    drop();
+  }
+}
+
+function GameOver() {
+  gameOverContainer.style.visibility = 'visible';
+  text.style.visibility = 'hidden';
+  scoreText.style.visibility = 'hidden';
+}
+
