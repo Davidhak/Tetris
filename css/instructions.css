@@ -71,3 +71,7 @@ a {
   cursor: pointer;
   text-decoration: none;
 }
+
+a:hover {
+  color: var(--color-secondary);
+}
