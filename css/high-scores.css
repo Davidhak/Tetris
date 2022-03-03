@@ -14,13 +14,17 @@ body {
   justify-content: center;
 }
 
-main {
+.container {
   max-width: 250px;
+  height: 420px;
   margin: 0 auto;
-  background-color: black;
   padding: 12px;
+  background-color: black;
+  color:var(--color-secondary);
   border:var(--color-secondary);
   border-style: solid;
+  text-align: center;
+  font-size: 22px;
 }
 
 h1 {
@@ -28,10 +32,15 @@ h1 {
   text-align: center;
 }
 
-p {
-  color:var(--color-secondary);
-  text-align: center;
-  font-size: 22px;
+#highScoresList {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 4rem;
+}
+
+.high-score {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
 }
 
 header {

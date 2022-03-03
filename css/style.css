@@ -16,19 +16,17 @@ font: 500 1rem 'Teko', 'sans-serif';
 canvas {
 display: block;
 margin: 0 auto;
+margin-top: 30px;
 padding: 0px;
 border:var(--color-secondary);
 border-style: solid;
 }
 
 #startGame, #gameOver {
-position: absolute;
-left: 50%;
-top: 50%;
-transform: translate(-50%, -50%);
-margin-top: 20px;
-width: 274px;
+max-width: 250px;
 height: 420px;
+margin: 0 auto;
+padding: 12px;
 font-size: 25px;
 font-weight: bold;
 text-align: center;
@@ -38,12 +36,23 @@ border-color: var(--color-secondary);
 border-style: solid;
 }
 
-#startGameBtn:hover {
+.startGameBtn {
+font: 500 1.5rem 'Teko', 'sans-serif';
+margin-top: 60px;
+width: 150px;
+height: 60px;
+color: var(--color-secondary);
+background-color: black;
+border-color: var(--color-secondary);
+border-style: solid;
+}
+
+.startGameBtn:hover, .saveButton:hover {
   background-color: #323325;
   cursor: pointer;
 }
 
-#startGame input {
+#gameOver input {
 width: 150px;
 font-size: 20px;
 color: var(--color-secondary);
@@ -54,34 +63,41 @@ text-align: center;
 font: 500 1.5rem 'Teko', 'sans-serif';
 }
 
-p {
-font-size: 16px;
-color: red;
-}
-
-#score, #finalScore {
-display: inline-block;
-}
-
-#scoreText {
-font-size: 30px;
-font-weight: bold;
-text-align: center;
-color:black;
-}
-
-#startGameBtn {
+.saveButton {
 font: 500 1.5rem 'Teko', 'sans-serif';
-margin-bottom: 10px;
+width: 150px;
+height: 40px;
 color: var(--color-secondary);
 background-color: black;
 border-color: var(--color-secondary);
 border-style: solid;
 }
 
+p {
+font-size: 16px;
+color: red;
+}
+
+#score, #finalScore, #levelText, #level {
+display: inline-block;
+}
+
+#scoreText {
+max-width: 200px;
+margin: 0 auto;
+margin-top: 5px;
+background-color: black;
+border-color: var(--color-secondary);
+border-style: solid;
+font-size: 20px;
+font-weight: bold;
+text-align: center;
+color: var(--color-secondary);
+}
+
 header {
 padding: 15px;
-margin-bottom: 30px;
+margin-bottom: 20px;
 background-color:var(--color-primary);
 }
 

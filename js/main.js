@@ -7,10 +7,12 @@ const startGame = document.getElementById('startGame');
 const errorText = document.getElementById('errorText');
 const gameOverContainer = document.getElementById('gameOver');
 
-text.style.visibility = 'hidden';
-scoreText.style.visibility = 'hidden';
+// Hide game board and scoreText
+container.style.display = 'none';
+gameOverContainer.style.display = 'none';
+text.style.display = 'none';
+scoreText.style.display = 'none';
 errorText.style.visibility = 'hidden';
-gameOverContainer.style.visibility = 'hidden';
 
 const row = 20;
 const col = column = 10;
@@ -195,7 +197,13 @@ Piece.prototype.lock = function () {
 
   // update the score
   scoreText.innerHTML = score;
-  finalScore.innerHTML = score;
+
+  //Save score to localStorage
+  localStorage.setItem('scoreFinal', JSON.stringify(score));
+
+  //Get final score from localStorage and input in gameOver-screen
+  finalScore.innerHTML = JSON.parse(localStorage.getItem('scoreFinal'));
+
 }
 
 // collision function
@@ -245,7 +253,7 @@ function control(event) {
   }
 }
 
-// drop the piece every 1sec
+// drop the piece every 0.8sec
 let startDrop = Date.now();
 let gameOver = false;
 
@@ -261,25 +269,62 @@ function drop() {
   }
 }
 
-
+// Makes startGame-div disappear and game board appear -> starts game by drop()
 function StartGame() {
-  let userName = document.getElementById('name').value;
 
-  if (typeof userName === 'undefined' || !userName) {
-    errorText.style.visibility = 'visible';
-
-  } else {
-    text.style.visibility = 'visible';
-    scoreText.style.visibility = 'visible';
-    startGame.style.visibility = 'hidden';
-    errorText.style.visibility = 'hidden';
-    drop();
-  }
+  container.style.display = "block";
+  text.style.display = 'block';
+  scoreText.style.display = 'inline-block';
+  startGame.style.display = 'none';
+  errorText.style.visibility = 'hidden';
+  drop();
 }
 
+// Makes game board disappear and gameOver-div appear
 function GameOver() {
-  gameOverContainer.style.visibility = 'visible';
-  text.style.visibility = 'hidden';
-  scoreText.style.visibility = 'hidden';
+  container.style.display = "none";
+  gameOverContainer.style.display = 'block';
+  text.style.display = 'none';
+  scoreText.style.display = 'none';
+  errorText.style.visibility = 'hidden';
 }
 
+const saveButton = document.querySelector('.saveButton');
+const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+const MAX_HIGH_SCORES = 5;
+
+if (saveButton) { //if element is not null
+
+  saveButton.addEventListener('click', function () {
+
+    let userName = document.getElementById('name').value;
+
+    if (typeof userName === 'undefined' || !userName) {
+      errorText.style.visibility = 'visible';
+      errorText.innerHTML = 'Enter a name';
+      errorText.style.color = 'red';
+
+    } else {
+      errorText.style.visibility = 'visible';
+      errorText.style.color = 'green';
+      errorText.innerHTML = 'Score saved';
+
+      localStorage.setItem('name', JSON.stringify(userName));
+
+      const name = JSON.parse(localStorage.getItem('name'));
+      const scoreFinal = JSON.parse(localStorage.getItem('scoreFinal'));
+
+      const playerScore = {
+        playerScore: scoreFinal,
+        name: name
+      };
+
+      highScores.push(playerScore);
+      highScores.sort((a, b) => b.playerScore - a.playerScore);
+      highScores.splice(5);
+
+      localStorage.setItem('highScores', JSON.stringify(highScores));
+      window.location.assign('/');
+    }
+  });
+}

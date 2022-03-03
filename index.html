@@ -26,27 +26,25 @@
 
   <div id="startGame">
     <br><br><br>
-    <label id="enterName" for="name">Enter your name: </label>
-    <input type="text" id="name" name="name" autocomplete="off">
-    <p id="errorText">Enter a name</p><br>
-    <button id="startGameBtn" onclick="StartGame()">Start Game</button>
-    <br>
+    <button class="startGameBtn" onclick="StartGame()">Start Game</button>
+    <br><br><br>
   </div>
 
   <div id="gameOver">
-    <br><br><br>
     <h1>GAME OVER</h1>
     <div id="gameOverScore">
       Score : <div id="finalScore">0</div><br><br>
     </div>
-    <!-- <button id="startGameBtn" onclick="PlayAgain()">Play again</button> -->
-    <br>
+    <label id="enterName" for="name">Enter your name: </label>
+    <input type="text" id="name" name="name" autocomplete="off">
+    <p id="errorText">Enter a name</p>
+    <button class="saveButton">Save Game</button>
   </div>
 
   <canvas id="tetris" , width="200" , height="400"></canvas>
 
   <div id="scoreText">
-    Score : <div id="score">0</div>
+    Score : <span id="score">0</span>
   </div>
 
 
