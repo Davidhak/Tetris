@@ -24,7 +24,7 @@ border-style: solid;
 
 #startGame, #gameOver {
 max-width: 250px;
-height: 420px;
+min-height: 420px;
 margin: 0 auto;
 padding: 12px;
 font-size: 25px;
@@ -39,7 +39,7 @@ border-style: solid;
 .startGameBtn {
 font: 500 1.5rem 'Teko', 'sans-serif';
 margin-top: 60px;
-width: 150px;
+max-width: 150px;
 height: 60px;
 color: var(--color-secondary);
 background-color: black;
@@ -53,7 +53,7 @@ border-style: solid;
 }
 
 #gameOver input {
-width: 150px;
+max-width: 150px;
 font-size: 20px;
 color: var(--color-secondary);
 background-color: black;
@@ -65,7 +65,7 @@ font: 500 1.5rem 'Teko', 'sans-serif';
 
 .saveButton {
 font: 500 1.5rem 'Teko', 'sans-serif';
-width: 150px;
+max-width: 150px;
 height: 40px;
 color: var(--color-secondary);
 background-color: black;

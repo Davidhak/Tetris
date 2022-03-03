@@ -16,7 +16,9 @@ body {
 
 main {
   max-width: 250px;
-  height: 420px;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
   background-color: #000000;
   padding: 12px;
@@ -27,7 +29,8 @@ main {
 }
 
 img {
-  width: 220px;
+  width: 100%;
+  max-width: 220px;
   margin-left: 16px;
   margin-top: 5px;
 }
